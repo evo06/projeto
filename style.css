@@ -1,22 +1,22 @@
-body{
+:root {
   font-family: 'Alice', sans-serif;
+  line-height: 150%;
+  color: #573a37;
+}
+
+body{
   /* background-color: #f5f5f5; */
   background-image: url(assets/bg-image.jpg);
   background-size: cover;
 
+
   margin: 0;
   padding: 0;
-}
-body {
-  font-family: 'Alice', sans-serif;
-  background-image: url(assets/bg-image.jpg);
-  background-size: cover;
-  position: relative;
 }
 
 body::before {
   content: "";
-  position: absolute;
+  position:fixed ;
   top: 0;
   left: 0;
   width: 100%;
@@ -26,9 +26,11 @@ body::before {
   z-index: 1;
 }
 
+
 #page {
   position: relative;
-  z-index: 2;
+  z-index: 2; /* Coloca o conteúdo acima do fundo */
+  box-sizing: border-box; /* Inclui padding e border no tamanho total */
   width: 800px;
   padding: 24px;
   background-color: #f5f5f5;
@@ -47,9 +49,10 @@ img {
 #page{
   width: 800px;
   padding: 24px;
-  background-color: #f5f5f5;
+  background-color: #f0e8c2;
   border-radius: 24px;
-  margin: auto;
+  margin: 48px auto;
+
 }
 
 img{
@@ -59,4 +62,14 @@ img{
   width: 100%;
   height: auto; /* Mantém a proporção da imagem */
   background-size: cover;
+}
+h1{
+  line-height: 140%;
+  font-size: 40px;
+}
+h2{
+  font-size: 24px;
+}
+h1, h2 {
+  color: #291b1a;
 }
