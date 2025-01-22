@@ -1,4 +1,8 @@
-:root {
+*{
+  margin: 0;
+  padding: 0; /* Remove o espaçamento padrão do navegador */
+}
+root {
   font-family: 'Alice', sans-serif;
   line-height: 150%;
   color: #573a37;
@@ -9,9 +13,9 @@ body{
   background-image: url(assets/bg-image.jpg);
   background-size: cover;
 
-
   margin: 0;
   padding: 0;
+
 }
 
 body::before {
@@ -28,7 +32,7 @@ body::before {
 
 
 #page {
-  position: relative;
+  position: relative; /* Permite que o conteúdo fique acima do fundo */
   z-index: 2; /* Coloca o conteúdo acima do fundo */
   box-sizing: border-box; /* Inclui padding e border no tamanho total */
   width: 800px;
@@ -44,6 +48,13 @@ img {
   margin: auto;
   width: 100%;
   height: auto; /* Mantém a proporção da imagem */
+}
+main {
+  padding: 24px;
+}
+
+section + section {
+  margin-top: 24px;
 }
 
 #page{
@@ -63,6 +74,9 @@ img{
   height: auto; /* Mantém a proporção da imagem */
   background-size: cover;
 }
+#about p + p {
+  margin-top: 12px;
+}
 h1{
   line-height: 140%;
   font-size: 40px;
@@ -72,4 +86,9 @@ h2{
 }
 h1, h2 {
   color: #291b1a;
+  margin-bottom: 4px;
+  line-height: 150%;
+}
+ul {
+  padding: 24px;
 }
